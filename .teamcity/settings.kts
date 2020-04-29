@@ -28,6 +28,7 @@ version = "2019.2"
 project {
 
     buildType(GetFile)
+    buildType(GetFile2)
     buildType(PublishFile)
 }
 
@@ -36,6 +37,19 @@ object GetFile : BuildType({
 
     dependencies {
         artifacts(PublishFile) {
+            buildRule = lastFinished()
+            cleanDestination = true
+            artifactRules = "file.txt => subdirectory"
+        }
+    }
+})
+
+object GetFile2 : BuildType({
+    name = "get file 2"
+
+    dependencies {
+        artifacts(AbsoluteId("VersionedSettings_ArtifactsPatch_GetFile")) {
+            id ="HARDCODED_ID"
             buildRule = lastFinished()
             cleanDestination = true
             artifactRules = "file.txt => subdirectory"
