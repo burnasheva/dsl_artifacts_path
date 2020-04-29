@@ -14,4 +14,22 @@ changeBuildType(RelativeId("GetFile2")) {
             param("a", "a")
         }
     }
+
+    dependencies {
+        expect(RelativeId("GetFile")) {
+            artifacts {
+                buildRule = lastFinished()
+                cleanDestination = true
+                artifactRules = "file.txt => subdirectory"
+            }
+        }
+        update(RelativeId("GetFile")) {
+            artifacts {
+                buildRule = lastFinished()
+                cleanDestination = true
+                artifactRules = "file.txt => subdirectory_2"
+            }
+        }
+
+    }
 }
