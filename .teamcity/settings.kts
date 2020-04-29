@@ -38,7 +38,7 @@ object GetFile : BuildType({
         artifacts(PublishFile) {
             buildRule = lastFinished()
             cleanDestination = true
-            artifactRules = "file.txt"
+            artifactRules = "file.txt => subdirectory"
         }
     }
 })
