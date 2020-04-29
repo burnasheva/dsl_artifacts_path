@@ -48,7 +48,7 @@ object GetFile2 : BuildType({
     name = "get file 2"
 
     dependencies {
-        artifacts(AbsoluteId("VersionedSettings_ArtifactsPatch_GetFile")) {
+        artifacts(AbsoluteId("VersionedSettings_ArtifactsPatch_PublishFile")) {
             id ="HARDCODED_ID"
             buildRule = lastFinished()
             cleanDestination = true
