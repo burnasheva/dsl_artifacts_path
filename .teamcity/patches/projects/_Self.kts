@@ -12,7 +12,7 @@ accordingly, and delete the patch script.
 changeProject(DslContext.projectId) {
     params {
         add {
-            password("password.to.copy", "credentialsJSON:1b4e115e-fbe0-4803-8913-5bbd8abbb645")
+            password("password.to.copy", "credentialsJSON:c9b97bdf-6ee5-4c59-afff-1dd912df16a6")
         }
     }
 }
